@@ -28,7 +28,9 @@ Release notes and versioning details live in [.release-notes.md](.release-notes.
 - [Security & GDPR Compliance](#-security--gdpr-compliance)
 - [Getting Started](#-getting-started)
 - [Agentic Multi-Entry Compatibility](#-agentic-multi-entry-compatibility)
+- [Roadmap](#️-roadmap)
 - [Release Notes & Versioning](#-release-notes--versioning)
+- [Contributing](#-contributing)
 - [License](#-license)
 
 ---
@@ -118,6 +120,18 @@ RepoLens includes dedicated semantic mapping layers out of the box, allowing mod
 - **`.cursor/rules/repolens.mdc`**: Target automation rules for structural Cursor code enforcement.
 - **`skills/README.md`**: Directory tracking functional engineering task configurations.
 
+## 🗺️ Roadmap
+
+RepoLens ships in modular phases, from core ingestion infrastructure through to enterprise hardening. Full checklists live in [roadmap/README.md](roadmap/README.md); the current snapshot:
+
+| Phase | Focus | Status |
+| --- | --- | --- |
+| 🟩 1. Core Ingestion Infrastructure | Monorepo topology, Prisma/pgvector schema, Python ingester scaffolding | In Progress (2/5) |
+| 🟨 2. Vectorization & Sync Pipeline | `.ts`/`.tsx` extraction, embedding hooks, bulk-load scripts | Planned |
+| 🟧 3. Identity & Tool Integration | Agent server, `better-auth`, BYOK middleware, similarity + grep tools | Planned |
+| 🟥 4. Cognitive Execution Loop | Vercel AI SDK tool-calling loop, plan-first constraints, context compaction | Planned |
+| 🔒 5. Hardening & Enterprise Compliance | Telemetry lockdown, Zero-Data Retention, finalized agent configs | Planned |
+
 ## 📦 Release Notes & Versioning
 
 RepoLens follows semantic versioning for public releases: `MAJOR.MINOR.PATCH`.
@@ -127,6 +141,10 @@ RepoLens follows semantic versioning for public releases: `MAJOR.MINOR.PATCH`.
 - Backward-compatible fixes increment `PATCH`.
 
 Current and historical release notes are tracked in [.release-notes.md](.release-notes.md).
+
+## 🤝 Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev setup, code style, and pull request process.
 
 ## 📜 License
 
