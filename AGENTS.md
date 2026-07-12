@@ -72,3 +72,12 @@ packages/
 - `pnpm-workspace.yaml` is the source of truth for pnpm workspace discovery.
 - Prisma validation requires `DATABASE_URL` to be set in the environment.
 - Do not add parser or vectorizer implementation logic until the workspace scaffolding is complete and validated.
+
+## Local Skills
+
+- `skills/README.md` lists the RepoLens-specific skills that are worth loading first.
+- Use `software-engineer` for normal implementation and review work.
+- Use `typescript` for `apps/agent-server` changes.
+- Use `python` for `packages/core-ingester` setup and maintenance.
+- Use `context-engineering` when choosing what to read or how much context to keep active.
+- Use `caveman` when the task should stay terse, direct, and validation-focused.
