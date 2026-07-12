@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.pnpm-store
+pnpm-lock.yaml
+venv
+.venv
+__pycache__
+*.egg-info
+packages/db-schema/prisma/schema.prisma

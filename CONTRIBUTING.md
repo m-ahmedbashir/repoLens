@@ -50,12 +50,12 @@ See [AGENTS.md](AGENTS.md) for the full command reference and architecture notes
 
 1. Keep changes focused and minimal — prefer the smallest diff that solves the problem.
 2. Validate the workspace you touched (typecheck/build/test) before expanding scope.
-3. Follow the existing code style; see [AGENTS.md § Code Style](AGENTS.md#code-style) and the [Commenting Guidelines](AGENTS.md#commenting-guidelines) — default to no comments, and when you do add one, explain *why*, not *what*.
+3. Follow the existing code style; see [AGENTS.md § Code Style](AGENTS.md#code-style) and the [Commenting Guidelines](AGENTS.md#commenting-guidelines) — default to no comments, and when you do add one, explain _why_, not _what_.
 4. Do not introduce parser or vectorizer logic in `packages/core-ingester` ahead of scaffolding decisions already made in that workspace — check `AGENTS.md` before adding new implementation surface there.
 
 ## Commit Messages
 
-Write clear, descriptive commit messages that explain *why* a change was made, not just what changed. There's no enforced commit format yet — just keep messages specific enough that `git log` is useful on its own.
+Write clear, descriptive commit messages that explain _why_ a change was made, not just what changed. There's no enforced commit format yet — just keep messages specific enough that `git log` is useful on its own.
 
 ## Pull Requests
 

@@ -63,31 +63,35 @@ Release notes and versioning details live in [.release-notes.md](.release-notes.
 
 RepoLens utilizes a highly decoupled Monorepo topology to separate high-compute syntax-parsing layers from active user-facing streaming runtimes:
 
-*   **`apps/agent-server`**: Type-safe Node.js environment orchestrating the **Vercel AI SDK**. Manages real-time LLM execution, recursive tool loops, and client streaming boundaries.
-*   **`packages/core-ingester`**: High-performance Python module implementing Abstract Syntax Tree (AST) parsing via language-aware splitters to extract functions and classes without breaking code semantics.
-*   **`packages/db-schema`**: Centralized database definition layer using **Prisma ORM** pre-configured for PostgreSQL and native `pgvector` indexing hooks.
+- **`apps/agent-server`**: Type-safe Node.js environment orchestrating the **Vercel AI SDK**. Manages real-time LLM execution, recursive tool loops, and client streaming boundaries.
+- **`packages/core-ingester`**: High-performance Python module implementing Abstract Syntax Tree (AST) parsing via language-aware splitters to extract functions and classes without breaking code semantics.
+- **`packages/db-schema`**: Centralized database definition layer using **Prisma ORM** pre-configured for PostgreSQL and native `pgvector` indexing hooks.
 
 ---
 
 ## 🔒 Security & GDPR Compliance
 
 RepoLens is strictly engineered around enterprise data privacy and strict EU compliance regulations:
-*   **Bring-Your-Own-Database (BYODB):** Data isolation is 100% user-controlled. No multi-tenant cloud storage is utilized; connection parameters point exclusively to your private storage infrastructure.
-*   **Zero-Data Retention (ZDR):** System pipelines prioritize data pipelines configured to target ephemeral cloud-processing models (e.g., Groq) where payloads are held exclusively in-memory and deleted immediately post-execution.
-*   **Telemetry Opt-Out:** OpenTelemetry tracking channels within the Vercel AI SDK are explicitly disabled to guarantee structural codebase snippets never leak to telemetry mirrors.
+
+- **Bring-Your-Own-Database (BYODB):** Data isolation is 100% user-controlled. No multi-tenant cloud storage is utilized; connection parameters point exclusively to your private storage infrastructure.
+- **Zero-Data Retention (ZDR):** System pipelines prioritize data pipelines configured to target ephemeral cloud-processing models (e.g., Groq) where payloads are held exclusively in-memory and deleted immediately post-execution.
+- **Telemetry Opt-Out:** OpenTelemetry tracking channels within the Vercel AI SDK are explicitly disabled to guarantee structural codebase snippets never leak to telemetry mirrors.
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Prerequisites & Node Installation
+
 Initialize the workspace tracking system and install dependencies from the monorepo root:
+
 ```bash
 # Core workspace dependency initialization
 pnpm install
 ```
 
 ### 2. Configure Python Processing Layer
+
 Navigate to the ingester module, instantiate an isolated virtual runtime environment, and load the text parsing packages:
 
 ```bash
@@ -106,6 +110,7 @@ repolens-ingest --help
 ```
 
 ### 3. Environment Architecture Setup
+
 Create a `.env` file mapping out connection strings for your localized or remote infrastructure layers:
 
 ```env
@@ -130,6 +135,7 @@ python -m pytest
 `pnpm test` runs every Node.js workspace's test script from the repo root. All of the above run automatically in [CI](.github/workflows/ci.yml) on every push and pull request to `main`.
 
 ## 🤖 Agentic Multi-Entry Compatibility
+
 RepoLens includes dedicated semantic mapping layers out of the box, allowing modern IDE agents and autonomous software engineers to ingest local repository rules instantly without execution drift:
 
 - **`AGENTS.md`**: Canonical configuration matrix definitions.
@@ -142,13 +148,13 @@ RepoLens includes dedicated semantic mapping layers out of the box, allowing mod
 
 RepoLens ships in modular phases, from core ingestion infrastructure through to enterprise hardening. Full checklists live in [roadmap/README.md](roadmap/README.md); the current snapshot:
 
-| Phase | Focus | Status |
-| --- | --- | --- |
-| 🟩 1. Core Ingestion Infrastructure | Monorepo topology, Prisma/pgvector schema, Python ingester scaffolding | In Progress (2/5) |
-| 🟨 2. Vectorization & Sync Pipeline | `.ts`/`.tsx` extraction, embedding hooks, bulk-load scripts | Planned |
-| 🟧 3. Identity & Tool Integration | Agent server, `better-auth`, BYOK middleware, similarity + grep tools | Planned |
-| 🟥 4. Cognitive Execution Loop | Vercel AI SDK tool-calling loop, plan-first constraints, context compaction | Planned |
-| 🔒 5. Hardening & Enterprise Compliance | Telemetry lockdown, Zero-Data Retention, finalized agent configs | Planned |
+| Phase                                   | Focus                                                                       | Status            |
+| --------------------------------------- | --------------------------------------------------------------------------- | ----------------- |
+| 🟩 1. Core Ingestion Infrastructure     | Monorepo topology, Prisma/pgvector schema, Python ingester scaffolding      | In Progress (2/5) |
+| 🟨 2. Vectorization & Sync Pipeline     | `.ts`/`.tsx` extraction, embedding hooks, bulk-load scripts                 | Planned           |
+| 🟧 3. Identity & Tool Integration       | Agent server, `better-auth`, BYOK middleware, similarity + grep tools       | Planned           |
+| 🟥 4. Cognitive Execution Loop          | Vercel AI SDK tool-calling loop, plan-first constraints, context compaction | Planned           |
+| 🔒 5. Hardening & Enterprise Compliance | Telemetry lockdown, Zero-Data Retention, finalized agent configs            | Planned           |
 
 ## 📦 Release Notes & Versioning
 
@@ -167,4 +173,3 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev se
 ## 📜 License
 
 RepoLens is licensed under the [Apache License 2.0](LICENSE).
-
