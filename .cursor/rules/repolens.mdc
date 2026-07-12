@@ -1,0 +1,15 @@
+---
+description: RepoLens repository guidance for Cursor.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# RepoLens Cursor Rules
+
+- Read [AGENTS.md](../../AGENTS.md) first.
+- Read [skills/README.md](../../skills/README.md) for the local skill pack.
+- Always apply `software-engineer` as the default baseline skill.
+- Add `typescript` for TypeScript or Node files and `python` for Python files.
+- Prefer the narrowest additional matching skill for the task, especially `context-engineering` or `caveman`.
+- Keep edits minimal and validate the touched slice before widening the scope.

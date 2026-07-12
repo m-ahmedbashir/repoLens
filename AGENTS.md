@@ -76,8 +76,8 @@ packages/
 ## Local Skills
 
 - `skills/README.md` lists the RepoLens-specific skills that are worth loading first.
-- Use `software-engineer` for normal implementation and review work.
-- Use `typescript` for `apps/agent-server` changes.
-- Use `python` for `packages/core-ingester` setup and maintenance.
+- Always apply `software-engineer` as the baseline for any task.
+- Add `typescript` for `apps/agent-server` or other TypeScript/Node files.
+- Add `python` for `packages/core-ingester` or other Python files.
 - Use `context-engineering` when choosing what to read or how much context to keep active.
 - Use `caveman` when the task should stay terse, direct, and validation-focused.

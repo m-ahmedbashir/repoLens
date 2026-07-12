@@ -19,3 +19,14 @@ repoLens is a monorepo for a code indexing and search workflow.
 - Add concrete agent tools for database queries and full-text search.
 - Wire the Python ingester into the shared database schema.
 - Add package-specific scripts once the implementation is filled in.
+
+## Agent Entry Points
+
+RepoLens includes multiple compatibility files so different IDEs and agents can load the same local guidance:
+
+- `AGENTS.md` - canonical repo instructions.
+- `AGENT.md` - compatibility shim for tools that expect the singular filename.
+- `CLAUDE.md` - Claude Code entrypoint.
+- `.github/copilot-instructions.md` - Copilot instructions.
+- `.cursor/rules/repolens.mdc` - Cursor auto-applied repo guidance.
+- `skills/README.md` - index of RepoLens-local skills.
