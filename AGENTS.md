@@ -1,4 +1,4 @@
-# AGENT.md
+# AGENTS.md
 
 This file provides guidance to AI coding agents when working in the RepoLens monorepo.
 
@@ -66,6 +66,16 @@ packages/
 - Use TypeScript strictness where enabled.
 - Prefer small, explicit modules over broad cross-package coupling.
 - Keep Python code compatible with the existing `src/` layout in `packages/core-ingester`.
+
+### Commenting Guidelines
+
+- Default to no comments. Well-named functions, types, and variables should carry the meaning.
+- Only comment the **why**, never the **what**: a non-obvious constraint, a workaround for a specific upstream bug, a subtle invariant a reader could easily violate.
+- Do not comment on task history ("fixed for issue #123", "added for the ingest flow") — that belongs in the commit message, not the source.
+- Do not leave commented-out code. Delete it; git history keeps it recoverable.
+- TypeScript (`apps/agent-server`, `packages/db-schema`): use `//` line comments; reserve TSDoc (`/** */`) for exported functions/types whose contract isn't obvious from the signature.
+- Python (`packages/core-ingester`): use `#` line comments; reserve docstrings for public functions/classes whose behavior isn't obvious from the name and signature.
+- Prisma schema (`packages/db-schema/schema.prisma`): comment only on fields or indexes whose purpose isn't clear from the name (e.g., why a column backs a pgvector index).
 
 ## Workspace Notes
 

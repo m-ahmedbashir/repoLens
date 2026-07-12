@@ -1,10 +1,35 @@
+<div align="center">
+
 # 🔍 RepoLens
 
-RepoLens is an industrial-grade, open-source, hybrid **Python + TypeScript** monorepo designed for high-fidelity codebase indexing, structural parsing, and agentic semantic search. 
+**Industrial-grade, open-source developer intelligence for codebase indexing & agentic semantic search.**
+
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/badge/release-v0.1.0-informational)](.release-notes.md)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Agent%20Server-3178C6?logo=typescript&logoColor=white)](apps/agent-server)
+[![Python](https://img.shields.io/badge/Python-Ingester-3776AB?logo=python&logoColor=white)](packages/core-ingester)
+[![Turborepo](https://img.shields.io/badge/Monorepo-Turborepo-EF4444?logo=turborepo&logoColor=white)](package.json)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](AGENTS.md)
+
+</div>
+
+RepoLens is an industrial-grade, open-source, hybrid **Python + TypeScript** monorepo designed for high-fidelity codebase indexing, structural parsing, and agentic semantic search.
 
 Instead of passing massive directories blindly into context windows, RepoLens acts as a localized developer intelligence tool—processing codebases through syntax-aware splitting, storing data across user-isolated vector instances, and managing multi-step reasoning tool loops via the Vercel AI SDK.
 
 Release notes and versioning details live in [.release-notes.md](.release-notes.md), [.release-version](.release-version), and [.release-tag](.release-tag), and the project uses semantic versioning for public releases.
+
+---
+
+## 📑 Table of Contents
+
+- [System Architecture](#️-system-architecture)
+- [Repository Layout](#-repository-layout)
+- [Security & GDPR Compliance](#-security--gdpr-compliance)
+- [Getting Started](#-getting-started)
+- [Agentic Multi-Entry Compatibility](#-agentic-multi-entry-compatibility)
+- [Release Notes & Versioning](#-release-notes--versioning)
+- [License](#-license)
 
 ---
 
