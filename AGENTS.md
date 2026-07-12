@@ -27,8 +27,10 @@ This file provides guidance to AI coding agents when working in the RepoLens mon
 
 ### Testing
 
-- `pnpm test` - Run workspace tests when package-level scripts exist.
-- Add or run package-specific tests through the relevant workspace filter when they are introduced.
+- `pnpm test` - Run tests across all Node.js workspaces via `pnpm -r --if-present run test`.
+- `pnpm --filter @repolens/agent-server test` - Run the agent server's Vitest suite directly.
+- `pip install -r requirements-dev.txt && python -m pytest` (from `packages/core-ingester`, with the venv active) - Run the ingester's pytest suite. `pytest.ini` sets `pythonpath = src` so `main`/`vectorizer` import the same way `setup.py`'s `py_modules` exposes them.
+- Add or extend package-specific tests through the relevant workspace filter (Vitest for `apps/agent-server`, pytest for `packages/core-ingester`) as new behavior is introduced.
 
 ### Maintenance
 
