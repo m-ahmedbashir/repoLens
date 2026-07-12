@@ -1,0 +1,2 @@
+langchain-text-splitters
+psycopg2-binary

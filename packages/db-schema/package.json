@@ -1,0 +1,13 @@
+{
+  "name": "@repolens/db-schema",
+  "private": true,
+  "scripts": {
+    "validate": "prisma validate",
+    "generate": "prisma generate",
+    "format": "prisma format"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.19.3",
+    "prisma": "^6.19.3"
+  }
+}
