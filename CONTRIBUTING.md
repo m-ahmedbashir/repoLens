@@ -36,6 +36,8 @@ Copy `.env.example` (if present) or create a `.env` at the repo root with `DATAB
 - `pnpm --filter @repolens/agent-server typecheck` — type-check the agent server
 - `pnpm --filter @repolens/db-schema validate` — validate the Prisma schema (`DATABASE_URL` required)
 - `repolens-ingest <path>` — run the ingestion CLI scaffold (after `pip install -e .`)
+- `pnpm lint` — run ESLint (`apps/agent-server`)
+- `pnpm format` — format the repo with Prettier; `pnpm format:check` to verify without writing
 
 See [AGENTS.md](AGENTS.md) for the full command reference and architecture notes.
 
@@ -49,7 +51,7 @@ See [AGENTS.md](AGENTS.md) for the full command reference and architecture notes
 ## Making a Change
 
 1. Keep changes focused and minimal — prefer the smallest diff that solves the problem.
-2. Validate the workspace you touched (typecheck/build/test) before expanding scope.
+2. Validate the workspace you touched (`pnpm format`, `pnpm lint`, typecheck/build/test) before expanding scope.
 3. Follow the existing code style; see [AGENTS.md § Code Style](AGENTS.md#code-style) and the [Commenting Guidelines](AGENTS.md#commenting-guidelines) — default to no comments, and when you do add one, explain _why_, not _what_.
 4. Do not introduce parser or vectorizer logic in `packages/core-ingester` ahead of scaffolding decisions already made in that workspace — check `AGENTS.md` before adding new implementation surface there.
 

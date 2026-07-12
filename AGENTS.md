@@ -25,6 +25,9 @@ This file provides guidance to AI coding agents when working in the RepoLens mon
 
 - `pnpm --filter @repolens/agent-server typecheck` - Run TypeScript type checking for the agent server.
 - `pnpm --filter @repolens/db-schema validate` - Validate the Prisma schema.
+- `pnpm lint` - Run ESLint across all workspaces (currently `apps/agent-server`, via its flat `eslint.config.js`).
+- `pnpm format` - Format the whole repo with Prettier (`.prettierrc.json` / `.prettierignore` at the root cover both apps and packages).
+- `pnpm format:check` - Check formatting without writing changes; this is what CI runs.
 - Prefer focused validation for the touched workspace before expanding scope.
 
 ### Testing
