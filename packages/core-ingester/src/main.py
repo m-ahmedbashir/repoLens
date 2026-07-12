@@ -6,7 +6,7 @@ from vectorizer import Vectorizer
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="repolens")
+    parser = argparse.ArgumentParser(prog="repolens-ingest")
     parser.add_argument("path", help="Repository path to index")
     return parser
 

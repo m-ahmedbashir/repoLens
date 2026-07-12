@@ -21,6 +21,9 @@ python -m venv venv
 .\venv\Scripts\activate   # Windows
 source venv/bin/activate  # macOS / Linux
 pip install -r requirements.txt
+
+# Optional: install in editable mode to expose the `repolens-ingest` CLI command
+pip install -e .
 ```
 
 Copy `.env.example` (if present) or create a `.env` at the repo root with `DATABASE_URL` and any provider keys you need — see [README.md](README.md#3-environment-architecture-setup). Never commit `.env` files; they're already covered by `.gitignore`.
@@ -32,9 +35,16 @@ Copy `.env.example` (if present) or create a `.env` at the repo root with `DATAB
 - `pnpm build` — build all workspace packages and apps
 - `pnpm --filter @repolens/agent-server typecheck` — type-check the agent server
 - `pnpm --filter @repolens/db-schema validate` — validate the Prisma schema (`DATABASE_URL` required)
-- `pnpm test` — run workspace tests where they exist
+- `repolens-ingest <path>` — run the ingestion CLI scaffold (after `pip install -e .`)
 
 See [AGENTS.md](AGENTS.md) for the full command reference and architecture notes.
+
+## Testing
+
+- `pnpm test` (repo root) — runs every Node.js workspace's test script (currently `@repolens/agent-server`'s Vitest suite).
+- `pnpm --filter @repolens/agent-server test` — run just the agent server's Vitest suite.
+- `pip install -r requirements-dev.txt && python -m pytest` (from `packages/core-ingester`, venv active) — run the ingester's pytest suite.
+- All of the above run in [CI](.github/workflows/ci.yml) on every push and pull request to `main`. Add a test alongside any behavior change — new tool logic in `apps/agent-server` gets a Vitest spec next to the source file (`*.test.ts`); new parsing/vectorizing logic in `packages/core-ingester` gets a pytest module under `tests/`.
 
 ## Making a Change
 

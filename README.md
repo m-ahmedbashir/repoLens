@@ -4,6 +4,7 @@
 
 **Industrial-grade, open-source developer intelligence for codebase indexing & agentic semantic search.**
 
+[![CI](https://github.com/m-ahmedbashir/repoLens/actions/workflows/ci.yml/badge.svg)](https://github.com/m-ahmedbashir/repoLens/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/badge/release-v0.1.0-informational)](.release-notes.md)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Agent%20Server-3178C6?logo=typescript&logoColor=white)](apps/agent-server)
@@ -98,6 +99,10 @@ source venv/bin/activate  # macOS / Linux
 .\venv\Scripts\activate   # Windows
 
 pip install -r requirements.txt
+
+# Optional: install in editable mode to expose the `repolens-ingest` CLI command
+pip install -e .
+repolens-ingest --help
 ```
 
 ### 3. Environment Architecture Setup
@@ -110,6 +115,19 @@ DATABASE_URL="postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require"
 # Inference Providers Configuration
 GROQ_API_KEY="gsk_..."
 ```
+
+### 4. Run the Tests
+
+```bash
+# TypeScript agent server (Vitest)
+pnpm --filter @repolens/agent-server test
+
+# Python ingester (pytest) — from packages/core-ingester, with the venv active
+pip install -r requirements-dev.txt
+python -m pytest
+```
+
+`pnpm test` runs every Node.js workspace's test script from the repo root. All of the above run automatically in [CI](.github/workflows/ci.yml) on every push and pull request to `main`.
 
 ## 🤖 Agentic Multi-Entry Compatibility
 RepoLens includes dedicated semantic mapping layers out of the box, allowing modern IDE agents and autonomous software engineers to ingest local repository rules instantly without execution drift:

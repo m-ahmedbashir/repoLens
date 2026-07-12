@@ -10,4 +10,9 @@ setup(
         "langchain-text-splitters",
         "psycopg2-binary",
     ],
+    entry_points={
+        "console_scripts": [
+            "repolens-ingest=main:main",
+        ],
+    },
 )

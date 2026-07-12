@@ -12,6 +12,8 @@ This file provides guidance to AI coding agents when working in the RepoLens mon
 - `python -m venv venv` - Create the Python virtual environment for `packages/core-ingester` when needed.
 - `venv\Scripts\Activate.ps1` - Activate the Python virtual environment on Windows.
 - `pip install langchain-text-splitters psycopg2-binary` - Install the core ingester Python dependencies.
+- `pip install -e .` (from `packages/core-ingester`, with the venv active) - Install the ingester in editable mode and expose the `repolens-ingest` console command (see `setup.py`'s `entry_points`).
+- `repolens-ingest <path>` - Run the ingestion CLI scaffold against a target repository path.
 
 ### Building
 
