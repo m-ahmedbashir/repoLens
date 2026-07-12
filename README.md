@@ -10,39 +10,24 @@ Release notes and versioning details live in [.release-notes.md](.release-notes.
 
 ## 🏗️ System Architecture
 
-[ TARGET SOURCE CODE ]
-                                │
-                                ▼
-            ┌───────────────────────────────────────┐
-            │     1. Python Ingestion Pipeline      │ (Language-aware AST parsing)
-            └───────────────────┬───────────────────┘
-                                │
-                                ▼
-            ┌───────────────────────────────────────┐
-            │     2. Prisma / PostgreSQL (pgvector)  │ (Unified Hybrid Storage)
-            └───────────────────┬───────────────────┘
-                                │
-                                ▼
-            ┌───────────────────────────────────────┐
-            │  3. TypeScript Agent (Vercel AI SDK)  │ (Autonomous Tool Loop)
-            └───────────────────────────────────────┘
-
-[ TARGET SOURCE CODE ]
-                                │
-                                ▼
-            ┌───────────────────────────────────────┐
-            │     1. Python Ingestion Pipeline      │ (Language-aware AST parsing)
-            └───────────────────┬───────────────────┘
-                                │
-                                ▼
-            ┌───────────────────────────────────────┐
-            │     2. Prisma / PostgreSQL (pgvector)  │ (Unified Hybrid Storage)
-            └───────────────────┬───────────────────┘
-                                │
-                                ▼
-            ┌───────────────────────────────────────┐
-            │  3. TypeScript Agent (Vercel AI SDK)  │ (Autonomous Tool Loop)
-            └───────────────────────────────────────┘
+```
+                        [ TARGET SOURCE CODE ]
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────┐
+             │   1. Python Ingestion Pipeline          │  (Language-aware AST parsing)
+             └───────────────────┬──────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────┐
+             │   2. Prisma / PostgreSQL (pgvector)     │  (Unified Hybrid Storage)
+             └───────────────────┬──────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────┐
+             │   3. TypeScript Agent (Vercel AI SDK)   │  (Autonomous Tool Loop)
+             └────────────────────────────────────────┘
+```
 
 ---
 
@@ -102,7 +87,7 @@ GROQ_API_KEY="gsk_..."
 ## 🤖 Agentic Multi-Entry Compatibility
 RepoLens includes dedicated semantic mapping layers out of the box, allowing modern IDE agents and autonomous software engineers to ingest local repository rules instantly without execution drift:
 
-- **`AGENTS.md` / `AGENT.md`**: Canonical configuration matrix definitions.
+- **`AGENTS.md`**: Canonical configuration matrix definitions.
 - **`CLAUDE.md`**: Direct integration path for Claude Code workflows.
 - **`.github/copilot-instructions.md`**: Global workspace prompt context mapping for GitHub Copilot.
 - **`.cursor/rules/repolens.mdc`**: Target automation rules for structural Cursor code enforcement.
