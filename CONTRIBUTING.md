@@ -67,7 +67,11 @@ Write clear, descriptive commit messages that explain _why_ a change was made, n
 
 ## Reporting Issues
 
-Open a GitHub issue with steps to reproduce, expected vs. actual behavior, and relevant environment details (OS, Node/Python/pnpm versions).
+Open a GitHub issue using the bug report or feature request template, with steps to reproduce, expected vs. actual behavior, and relevant environment details (OS, Node/Python/pnpm versions). For security vulnerabilities, follow [SECURITY.md](SECURITY.md) instead of opening a public issue.
+
+## Code of Conduct
+
+This project follows the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you're expected to uphold it.
 
 ## License
 

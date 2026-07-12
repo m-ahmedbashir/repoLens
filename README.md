@@ -32,6 +32,8 @@ Release notes and versioning details live in [.release-notes.md](.release-notes.
 - [Roadmap](#️-roadmap)
 - [Release Notes & Versioning](#-release-notes--versioning)
 - [Contributing](#-contributing)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
 - [License](#-license)
 
 ---
@@ -168,7 +170,7 @@ Current and historical release notes are tracked in [.release-notes.md](.release
 
 ## 🤝 Contributing
 
-Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev setup, code style, and pull request process.
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev setup, code style, and pull request process. Participation is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). Found a security issue? See [SECURITY.md](SECURITY.md) for how to report it privately.
 
 ## 📜 License
 
